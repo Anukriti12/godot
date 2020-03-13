@@ -1692,6 +1692,11 @@ public:
 			}
 		}
 
+		String rk = p_preset->get("keystore/release");
+		if (!rk.empty() && !FileAccess::exists(rk)) {
+			valid = false;
+		}
+
 		if (bool(p_preset->get("custom_template/use_custom_build"))) {
 			String sdk_path = EditorSettings::get_singleton()->get("export/android/custom_build_sdk_path");
 			if (sdk_path == "") {
