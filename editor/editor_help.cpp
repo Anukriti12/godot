@@ -652,13 +652,6 @@ void EditorHelp::_update_doc() {
 					group_prefix = "";
 				}
 
-				if (is_new_group && pass == 1) {
-					class_desc->push_cell();
-					class_desc->pop(); //cell
-					class_desc->push_cell();
-					class_desc->pop(); //cell
-				}
-
 				if (m[i].description != "") {
 					method_descr = true;
 				}
